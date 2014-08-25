@@ -9,8 +9,6 @@ RUN unzip /opt/play.zip -d /opt
 
 RUN mv /opt/play-2.2.3 /opt/play
 
-RUN cd /samples/java/websocket-chat
-
 RUN rm /opt/play.zip
 
 ENV PATH /opt/play:$PATH
