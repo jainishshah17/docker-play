@@ -1,4 +1,5 @@
 FROM cedricziel/docker-scala
+
 MAINTAINER jainish shah "jainishshah@yahoo.com"
 
 RUN apt-get -y install wget unzip && apt-get clean
@@ -11,8 +12,10 @@ RUN mv /opt/play-2.2.3 /opt/play
 
 RUN rm /opt/play.zip
 
+RUN cd /opt/play-2.2.3/samples/java/websocket-chat
+
 ENV PATH /opt/play:$PATH
 
-RUN cd /play-2.2.3/samples/java/websocket-chat
+
 
 CMD ["play start"]
