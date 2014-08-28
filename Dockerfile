@@ -15,4 +15,4 @@ ENV PATH /opt/play:$PATH
 
 RUN cd /play-2.2.3/samples/java/websocket-chat
 
-RUN play start
+CMD ["play start"]
